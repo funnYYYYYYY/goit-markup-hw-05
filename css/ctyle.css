@@ -677,7 +677,8 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-informations:hover .thumb-text {
+.main-informations:hover .thumb-text,
+.main-informations:focus .thumb-text {
   transform: translate(0);
 }
 
