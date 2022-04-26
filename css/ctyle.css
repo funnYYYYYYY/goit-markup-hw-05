@@ -239,7 +239,8 @@ img {
   border: none;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .envelope-icon {
@@ -257,10 +258,6 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
-/* .current-button {
-  color: var(--accent-text-color);
-} */
 
 /* Section 1 */
 
@@ -424,43 +421,30 @@ img {
 }
 
 .social-media-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
   display: flex;
   justify-content: center;
+
+  cursor: pointer;
   align-items: center;
-  color: #afb1b8;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-media-icon:hover {
-  background-color: var(--accent-text-color);
 }
 
 .social-link {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
   color: var(--color-svg);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover {
-  color: var(--background-color);
-}
-
+.social-link:hover,
 .social-link:focus {
   color: var(--background-color);
   background-color: var(--accent-text-color);
-}
-
-.social-media-icon:hover .social-svg,
-.social-media-icon:focus .social-svg {
-  color: var(--background-color);
 }
 
 .social-media-icon:not(:last-child) {
@@ -469,7 +453,6 @@ img {
 
 .social-svg {
   fill: currentColor;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-content {
@@ -531,52 +514,33 @@ img {
 
 .logo-company-icon {
   display: flex;
+}
+
+.link-logo-company {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
-  border-right: 1px solid var(--color-svg);
-  border-top: 1px solid var(--color-svg);
-  border-bottom: 1px solid var(--color-svg);
-  border-left: 1px solid var(--color-svg);
-  border-radius: 4px;
+  border: 1px solid var(--color-svg);
   cursor: pointer;
-  color: var(--accent-text-color);
+  color: var(--color-svg);
+  border-radius: 4px;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo-company-icon:hover {
-  border-color: var(--accent-text-color);
-}
-
-.logo-company-icon:hover .logo-company-svg,
+.link-logo-company:hover,
 .link-logo-company:focus {
+  border-color: var(--accent-text-color);
   color: var(--accent-text-color);
 }
-
-/* .logo-company-sign {
-  color: currentColor;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.logo-company-icon:focus .logo-company-sign {
-  color: var(--accent-text-color);
-} */
 
 .logo-company-svg {
   width: 106px;
   height: 60px;
   fill: currentColor;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-logo-company {
-  color: var(--color-svg);
-}
-
-.link-logo-company:focus {
-  color: var(--accent-text-color);
 }
 
 .logo-company-icon:not(:last-child) {
@@ -788,14 +752,7 @@ img {
 }
 
 .fotter-svg-list {
-  cursor: pointer;
   display: flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--bcg-footer-icon);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list {
@@ -806,25 +763,27 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bcg-footer-icon);
+  cursor: pointer;
+  color: var(--background-color);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-svg-icon {
-  fill: var(--background-color);
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-text-color);
 }
 
-.fotter-svg-list:hover {
-  background-color: var(--accent-text-color);
+.footer-svg-icon {
+  fill: currentColor;
 }
 
 .fotter-svg-list + .fotter-svg-list {
   margin-left: 10px;
-}
-
-.footer-soc-link:focus {
-  background-color: var(--accent-text-color);
 }
 
 .information .container {
